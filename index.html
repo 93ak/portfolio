@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Akshara Sundaresan</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshara Sundaresan</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">Akshara Sundaresan</div>
-        <div class="menu">
-            <a onclick="showPage('home')">Home</a>
-            <a onclick="showPage('projects')">Projects</a>
-            <a href="Akshara S- Resume (1).pdf" target="_blank">Resume</a>
-        </div>
-    </nav>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Akshara Sundaresan</div>
+    <div class="menu">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('projects')">Projects</a>
+      <a href="Akshara S- Resume (1).pdf" target="_blank">Resume</a>
+    </div>
+  </nav>
 
-    <!-- HOME PAGE -->
-    <section id="home" class="page active">
-        <h1>Akshara S</h1>
-        <p>
-            CSE student in Easwari Engineering College. Interested in software engineering, design, and building real things.
-            Currently learning web, low-level concepts, and problem solving.
-        </p>
+  <!-- HOME PAGE -->
+  <section id="home" class="page active">
+    <h1>Akshara S</h1>
+    <p>
+      CSE student in Easwari Engineering College. Interested in software engineering,
+      design, and building real things. Currently learning web, low-level concepts,
+      and problem solving.
+    </p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/akshara-s-77b051329/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/93ak" target="_blank">GitHub</a>
+      <a href="https://leetcode.com/u/ak39/" target="_blank">Leetcode</a>
+      <a href="mailto:alp.akshara@gmail.com">alp.akshara@gmail.com</a>
+    </div>
+  </section>
 
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/akshara-s-77b051329/" target="_blank">LinkedIn</a> <br>
-            <a href="https://github.com/93ak" target="_blank">GitHub</a> <br>
-            <a href="https://leetcode.com/u/ak39/" target="_blank">Leetcode</a><br>
-            <a> Email: alp.akshara@gmail.com</a>
-        </div>
-    </section>
+  <!-- PROJECTS PAGE -->
+  <section id="projects" class="page">
+    <h2>Projects</h2>
+    <!-- Cards are injected here by renderProjects() -->
+    <div id="projects-container"></div>
+  </section>
 
-    <!-- PROJECTS PAGE -->
-    <section id="projects" class="page">
-        <h2>Projects</h2>
+  <!-- Load project data first, then the renderer -->
+  <script src="projects.js"></script>
+  <script>
+    /* ── Page navigation ── */
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
 
-        <div class="project">
-            <a href="https://github.com/93ak/game1" target="_blank">
-                ARCADE BROWSER GAME WITH LEADERBOARD
-            </a>
-            <p>
-                Tech Stack: HTML5 Canvas, JavaScript, MongoDB, Render, MongoDB AtlasBuilt and deployed a browser-based arcade game with a live leaderboard. <br>
-                Frontend implemented with HTML5 Canvas and JavaScript; backend built with Node.js/Express, connected to MongoDB Atlas, and deployed on Render for global access.
+    /* ── Render project cards from PROJECTS array ── */
+    function renderProjects() {
+      const container = document.getElementById('projects-container');
 
-            </p>
-            <img src="game1.png" alt="Screenshot of Arcade Game" class="project-img">
-        </div>
-    </section>
+      PROJECTS.forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'project';
 
-    <!-- JS -->
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
+        // Tech stack badges
+        const badges = project.techStack
+          .map(t => `<span class="badge">${t}</span>`)
+          .join('');
 
-            document.getElementById(pageId).classList.add('active');
-        }
-    </script>
+        // Screenshot (only if image is provided)
+        const imgHTML = project.image
+          ? `<img src="${project.image}" alt="Screenshot of ${project.title}" class="project-img">`
+          : '';
 
+        // GitHub button (only if link is provided)
+        const githubBtn = project.github
+          ? `<a href="${project.github}" target="_blank" class="github-btn">View on GitHub ↗</a>`
+          : '';
+
+        card.innerHTML = `
+          ${imgHTML}
+          <div class="project-body">
+            <h3>${project.title}</h3>
+            <div class="badges">${badges}</div>
+            <p>${project.description}</p>
+            ${githubBtn}
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    renderProjects();
+  </script>
 </body>
 </html>
