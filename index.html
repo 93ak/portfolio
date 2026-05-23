@@ -37,38 +37,27 @@
   <!-- PROJECTS PAGE -->
   <section id="projects" class="page">
     <h2>Projects</h2>
-    <!-- Cards are injected here by renderProjects() -->
     <div id="projects-container"></div>
   </section>
 
   <!-- Load project data first, then the renderer -->
   <script src="projects.js"></script>
   <script>
-    /* ── Page navigation ── */
     function showPage(pageId) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(pageId).classList.add('active');
     }
 
-    /* ── Render project cards from PROJECTS array ── */
     function renderProjects() {
       const container = document.getElementById('projects-container');
-
       PROJECTS.forEach(project => {
         const card = document.createElement('div');
         card.className = 'project';
 
-        // Tech stack badges
-        const badges = project.techStack
-          .map(t => `<span class="badge">${t}</span>`)
-          .join('');
-
-        // Screenshot (only if image is provided)
+        const badges = project.techStack.map(t => `<span class="badge">${t}</span>`).join('');
         const imgHTML = project.image
           ? `<img src="${project.image}" alt="Screenshot of ${project.title}" class="project-img">`
           : '';
-
-        // GitHub button (only if link is provided)
         const githubBtn = project.github
           ? `<a href="${project.github}" target="_blank" class="github-btn">View on GitHub ↗</a>`
           : '';
@@ -82,7 +71,6 @@
             ${githubBtn}
           </div>
         `;
-
         container.appendChild(card);
       });
     }

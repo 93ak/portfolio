@@ -1,8 +1,7 @@
 // ─────────────────────────────────────────────
 //  PROJECTS DATA
-//  To add a new project, copy one object from
-//  the array below and fill in the fields.
-//  Put project screenshots in the images/ folder.
+//  To add a new project, copy one object and
+//  fill in the fields. Images go in images/
 // ─────────────────────────────────────────────
 
 const PROJECTS = [
@@ -14,8 +13,8 @@ const PROJECTS = [
       "authentication, editable logs with timestamps, and an admin dashboard for " +
       "tracking activity and submissions. Integrated React frontend with Node/Express " +
       "backend and deployed using Vercel and Railway.",
-    image: "",          // add image filename here when you have one, e.g. "images/worklog.png"
-    github: "",         // add GitHub link when available
+    image: "",       // add "images/worklog.png" when you have a screenshot
+    github: "",      // add GitHub link when available
   },
   {
     title: "Aadhaar Data Analysis and Data Quality Insights",
@@ -25,7 +24,7 @@ const PROJECTS = [
       "compared it with official records, and identified inconsistencies across multiple " +
       "datasets. Generated state-wise insights and visualizations to highlight data issues. " +
       "Collaborated in a team for data cleaning, analysis, and visualization.",
-    image: "",          // add image filename here when you have one
+    image: "",
     github: "https://github.com/an-42-an/uidai1",
   },
     {
