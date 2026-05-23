@@ -11,7 +11,7 @@ const PROJECTS = [
     description:
       "Web application to log and monitor employee tasks. " +
       "Tracking activity and submissions.",
-    image: "",       // add "images/worklog.png" when you have a screenshot
+    image: "images/worklog.png",       // add "images/worklog.png" when you have a screenshot
     github: "https://github.com/93ak/worklog-documentation",      // add GitHub link when available
   },
   {
@@ -21,7 +21,7 @@ const PROJECTS = [
       "Analyzed public UIDAI datasets to evaluate data quality. " +
       "Generated state-wise insights and visualizations to highlight data issues. " +
       "Collaborated in a team for data cleaning, analysis, and visualization.",
-    image: "",
+    image: "images/uidai.png",
     github: "https://github.com/an-42-an/uidai1",
   },
     {
