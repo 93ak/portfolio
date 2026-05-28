@@ -24,6 +24,15 @@ const PROJECTS = [
     image: "images/uidai.png",
     github: "https://github.com/an-42-an/uidai1",
   },
+  {
+    title: "Design Portfolio",
+    techStack: ["React", "Vite", "Tailwind", "Framer Motion"],
+    description:
+      "Designed and developed a responsive creative portfolio showcasing motion graphics, video edits, and visual design work.",
+    image: "images/vlackvink.png",
+    github: "https://github.com/93ak/design-portfolio",
+  },
+
     {
     title: "Arcade Browser Game with Leaderboard",
     techStack: ["HTML5 Canvas", "Node.js", "MongoDB", "Render"],
