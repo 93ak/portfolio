@@ -33,7 +33,7 @@ const PROJECTS = [
     github: "https://github.com/93ak/design-portfolio",
   },
 
-    {
+  {
     title: "Arcade Browser Game with Leaderboard",
     techStack: ["HTML5 Canvas", "Node.js", "MongoDB", "Render"],
     description:
