@@ -15,12 +15,10 @@ const PROJECTS = [
     github: "https://github.com/93ak/worklog-documentation",      // add GitHub link when available
   },
   {
-    title: "Aadhaar Data Analysis and Data Quality Insights",
-    techStack: ["Python", "Pandas", "Hugging Face Datasets", "Matplotlib"],
+    title: "Aadhaar Data Analysis",
+    techStack: ["Python", "Pandas", "Hugging Face", "Matplotlib"],
     description:
-      "Analyzed public UIDAI datasets to evaluate data quality. " +
-      "Generated state-wise insights and visualizations to highlight data issues. " +
-      "Collaborated in a team for data cleaning, analysis, and visualization.",
+      "Analyzed public UIDAI datasets, collaborated in a team for data cleaning, analysis, and visualization.",
     image: "images/uidai.png",
     github: "https://github.com/an-42-an/uidai1",
   },

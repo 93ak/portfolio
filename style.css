@@ -17,6 +17,7 @@ body {
     background-color: #0b0b0b;
     color: #eaeaea;
     font-family: 'Coolvetica', system-ui, sans-serif;
+    letter-spacing: .3px;
 }
 
 /* ---------- NAVBAR ---------- */
@@ -64,13 +65,13 @@ body {
 
 
 /* ---------- PAGE LAYOUT ---------- */
+
 .page {
     display: none;
-    max-width: 900px;
+    width: 100%;
+    max-width: 1400px;
     margin: auto;
-    padding: 120px 40px;
-    padding-top: 100px;
-
+    padding: 120px 24px 60px;
 }
 
 .page.active {
@@ -85,6 +86,12 @@ h1 {
 h2 {
     font-size: 36px;
     margin-bottom: 20px;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: normal;
+    color: #FFFFFF;
 }
 
 p {
@@ -183,4 +190,86 @@ p {
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
+}
+/* ---------- HERO ---------- */
+
+
+.hero {
+    min-height: calc(100vh - 140px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+.hero-tag {
+    color: #8a8a8a;
+    letter-spacing: 0.25em;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: 0.95;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero h1 span {
+    color: #7c5cff;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #b8b8b8;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.25s ease;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.primary-btn {
+    background: #7c5cff;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #9277ff;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid #2d2d2d;
+    color: #d0d0d0;
+    background: #151515;
+}
+
+.secondary-btn:hover {
+    border-color: #7c5cff;
+    color: white;
 }
