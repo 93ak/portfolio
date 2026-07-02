@@ -39,7 +39,16 @@ const PROJECTS = [
     image: "images/vlackvink.png",
     github: "https://github.com/93ak/design-portfolio",
   },
-
+  
+  {
+    title: "Sekai Grid",
+    techStack: ["HTML5 Canvas", "Node.js", "MongoDB", "Render"],
+    description:
+      "Frontend running game using the TextAlive API. "+
+      "Submitted for Magical Mirai Programming Contest",
+    image: "images/sekaigrid.png",
+    github: "https://github.com/93ak/magical-mirai-2026",
+  },
   {
     title: "Arcade Browser Game with Leaderboard",
     techStack: ["HTML5 Canvas", "Node.js", "MongoDB", "Render"],
