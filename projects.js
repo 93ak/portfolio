@@ -6,6 +6,15 @@
 
 const PROJECTS = [
   {
+    title: "Artisan Buddy",
+    techStack: ["React", "FastAPI", "ChromaDB", "Qwen3"],
+    description:
+      "AI-powered pricing and listing assistant for artisans." +
+      "reviews product photos and provides design feedback",
+    image: "images/artisanbuddy.png",       // add "images/worklog.png" when you have a screenshot
+    github: "https://github.com/93ak/artisan-price-buddy",      // add GitHub link when available
+  },
+  {
     title: "Team Work Log Web Application",
     techStack: ["React", "Node & Express", "MongoDB"],
     description:
